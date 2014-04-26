@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import pl.cudlax.domain.TestBazy;
 import pl.cudlax.model.TestModel;
 import pl.cudlax.repository.TestRepository;
 
@@ -32,7 +31,7 @@ public class HomeController {
 	public String home(Model model) {
 		logger.info("HomeController");
 
-		model.addAttribute("list", testRepository.readList().toString());
+		model.addAttribute("list", "LSIT");
 
 		return "home";
 	}
@@ -46,9 +45,6 @@ public class HomeController {
 	@RequestMapping(value = "getForm", method = RequestMethod.POST)
 	public String processTestModel(Model model,
 			@ModelAttribute TestModel testModel) {
-		TestBazy tb = new TestBazy();
-		tb.setTest(testModel.getTest());
-		testRepository.save(tb);
 		return "redirect:/";
 	}
 

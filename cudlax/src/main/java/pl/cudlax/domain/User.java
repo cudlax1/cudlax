@@ -36,6 +36,9 @@ public class User {
 	@Column(name = "ROLE")
 	private String role;
 
+	@Column(name ="PASSWORD")
+	private String password;
+
 	public Long getUserId() {
 		return userId;
 	}

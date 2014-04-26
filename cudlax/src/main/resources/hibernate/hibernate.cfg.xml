@@ -12,10 +12,8 @@
 		<!--<property name="hibernate.cache.provider_configuration_file_resource_path">classpath:hibernate/ehcache.xml</property> -->
 		<property name="generate_statistics">false</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
-		<property name="hbm2ddl.auto">create</property>
+		<property name="hbm2ddl.auto">update</property>
 		<!-- <property name="hibernate.hbm2ddl.import_files_sql_extractor">org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor</property> -->
 
-		<!-- Mappings -->
-		<mapping class="pl.cudlax.domain.TestBazy" />
 	</session-factory>
 </hibernate-configuration>
